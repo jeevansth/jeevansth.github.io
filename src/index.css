@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --primary: #6C5CE7;
+  --secondary: #00B4D8;
+  --bg-light: #F9FAFB;
+  --bg-dark: #0F172A;
+  --text-light: #1F2937;
+  --text-dark: #E5E7EB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition;
+}
+
+.hero-accent {
+  background: radial-gradient(800px 400px at 10% 10%, rgba(108,92,231,0.18), transparent 10%), radial-gradient(800px 400px at 90% 90%, rgba(0,180,216,0.12), transparent 10%);
+}
+
+.fancy-glow {
+  box-shadow: 0 10px 30px rgba(12,8,40,0.12);
+}
