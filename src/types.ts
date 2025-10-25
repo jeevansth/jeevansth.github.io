@@ -4,6 +4,7 @@ export type Project = {
   description: string
   tech: string[]
   github?: string
+  image?: string 
 }
 
 export type Skill = {

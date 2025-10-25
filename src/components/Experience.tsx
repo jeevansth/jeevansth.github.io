@@ -1,17 +1,24 @@
 import React from 'react'
 import type { Experience as ExpType } from '../types'
 import { BackgroundCanvas } from './BackgroundCanvas'
+import resumeFile from '../data/Jeevan_Shrestha.pdf' // import resume file
 
 type Props = { items: ExpType[] }
 
 const Experience3D: React.FC<Props> = ({ items }) => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects')
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="experience" className="min-h-screen relative overflow-hidden">
       
-      {/* Use the lightweight animated background */}
       <BackgroundCanvas />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-bold text-slate-900 mb-4">Experience</h2>
           <p className="text-xl text-slate-600">My professional journey and contributions</p>
@@ -57,12 +64,22 @@ const Experience3D: React.FC<Props> = ({ items }) => {
               Ready for new challenges and opportunities to make an impact.
             </p>
             <div className="flex justify-center gap-4">
-              <button className="px-7 py-3.5 bg-slate-900 dark:bg-gray-800 text-white rounded-xl hover:bg-slate-800 dark:hover:bg-gray-700 transition-all font-semibold">
+              {/* Scroll to Projects */}
+              <button
+                onClick={scrollToProjects}
+                className="px-7 py-3.5 bg-slate-900 dark:bg-gray-800 text-white rounded-xl hover:bg-slate-800 dark:hover:bg-gray-700 transition-all font-semibold"
+              >
                 View Projects
               </button>
-              <button className="px-7 py-3.5 border-2 border-slate-300 dark:border-gray-600 text-slate-700 dark:text-gray-300 rounded-xl hover:border-slate-900 dark:hover:border-white transition-all font-semibold">
+
+              {/* Download Resume */}
+              <a
+                href={resumeFile}
+                download="Jeevan_Shrestha.pdf"
+                className="px-7 py-3.5 border-2 border-slate-300 dark:border-gray-600 text-slate-700 dark:text-gray-300 rounded-xl hover:border-slate-900 dark:hover:border-white transition-all font-semibold"
+              >
                 Get Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>

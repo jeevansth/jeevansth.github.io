@@ -1,5 +1,6 @@
 import React from 'react';
 import { BackgroundCanvas } from './BackgroundCanvas';
+import resumeFile from '../data/Jeevan_Shrestha.pdf'; // make sure the path is correct
 
 const ProfessionalAbout: React.FC = () => {
   return (
@@ -24,8 +25,8 @@ const ProfessionalAbout: React.FC = () => {
               
               <div className="mt-6 pl-1 border-l-4 border-blue-600">
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Software Engineer specializing in Machine Learning & Computer Vision. 
-                  Building production-ready systems that bridge research and engineering excellence.
+                  I’m Jeevan, a software engineer with experience in AI, ML, and modern web development. 
+                  Currently seeking new opportunities to apply my skills and tackle real-world problems.
                 </p>
               </div>
             </div>
@@ -54,12 +55,27 @@ const ProfessionalAbout: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors font-medium">
+              {/* Scroll to Projects */}
+              <button
+                onClick={() => {
+                  const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="px-8 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors font-medium"
+              >
                 View Projects
               </button>
-              <button className="px-8 py-3 border border-gray-300 text-gray-700 rounded-xl hover:border-gray-400 transition-colors font-medium">
+
+              {/* Download Resume */}
+              <a
+                href={resumeFile}
+                download="Jeevan_Shrestha.pdf"
+                className="px-8 py-3 border border-gray-300 text-gray-700 rounded-xl hover:border-gray-400 transition-colors font-medium"
+              >
                 Download Resume
-              </button>
+              </a>
             </div>
           </div>
 
@@ -95,8 +111,8 @@ const ProfessionalAbout: React.FC = () => {
             {/* Current Focus */}
             <div className="p-6 bg-blue-50 rounded-2xl border border-blue-200">
               <div className="text-blue-700 text-sm font-medium">Current Focus</div>
-              <div className="text-gray-900 font-semibold mt-2">Advanced AI Research & Scalable Systems</div>
-              <div className="text-gray-600 text-sm mt-2">Seeking full-time opportunities starting May 2025</div>
+              {/* <div className="text-gray-900 font-semibold mt-2">Advanced AI Research & Scalable Systems</div> */}
+              <div className="text-gray-600 text-sm mt-2">Seeking full-time opportunities</div>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const ProfessionalContact: React.FC = () => {
       {/* Shared background */}
       <BackgroundCanvas />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-32">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-slate-900 mb-4">Let's Connect</h2>
@@ -65,7 +65,7 @@ const ProfessionalContact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium mb-1">Location</div>
-                  <div className="text-slate-900 font-semibold">Cape Girardeau, MO</div>
+                  <div className="text-slate-900 font-semibold">Seattle, WA</div>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const ProfessionalContact: React.FC = () => {
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-2xl text-white">
               <div className="text-slate-400 text-xs font-bold uppercase mb-2">Status</div>
               <div className="font-bold mb-1">Available for Work</div>
-              <div className="text-slate-300 text-sm">Full-time • May 2025</div>
+              <div className="text-slate-300 text-sm">Full-time</div>
             </div>
           </div>
 

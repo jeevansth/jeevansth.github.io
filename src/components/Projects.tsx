@@ -3,6 +3,9 @@ import type { Project } from '../types';
 import { Github, ExternalLink } from 'lucide-react';
 import { BackgroundCanvas } from './BackgroundCanvas';
 
+// Import local images here
+import tbXrayImg from '../images/negative.png';
+
 type Props = { projects: Project[] };
 
 const Projects: React.FC<Props> = ({ projects }) => {
@@ -23,6 +26,17 @@ const Projects: React.FC<Props> = ({ projects }) => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, idx) => {
             const color = colors[idx % colors.length];
+
+            // Determine the image source
+            let imgSrc: string;
+            if (p.image) {
+              imgSrc = p.image; // already a local import
+            } else if (p.id === 'tb-xray') {
+              imgSrc = tbXrayImg; // local image for TB X-ray
+            } else {
+              imgSrc = `https://source.unsplash.com/600x400/?tech,${p.title}`;
+            }
+
             return (
               <div
                 key={p.id}
@@ -30,22 +44,22 @@ const Projects: React.FC<Props> = ({ projects }) => {
               >
                 <div className="relative h-48 bg-slate-100 overflow-hidden">
                   <img
-                    src={p.image || `https://source.unsplash.com/600x400/?tech,${p.title}`}
+                    src={imgSrc}
                     alt={p.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center gap-3 pb-6">
-                    {p.live && (
+                    
                       <a
-                        href={p.live}
+                      
                         target="_blank"
                         rel="noreferrer"
                         className="p-3 bg-white rounded-xl hover:bg-slate-100 transition-colors"
                       >
                         <ExternalLink size={18} className="text-slate-900" />
                       </a>
-                    )}
+                  
                     {p.github && (
                       <a
                         href={p.github}
