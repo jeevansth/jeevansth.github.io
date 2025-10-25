@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Vite build output
+dist/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Tailwind / PostCSS cache (optional)
+.cache/
+.postcss/
+
+# macOS system files
+.DS_Store
+
+# IDE/editor directories
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
