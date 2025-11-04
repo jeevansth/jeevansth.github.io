@@ -8,26 +8,25 @@ const Footer: React.FC = () => {
         
         <div className="flex justify-center md:justify-start gap-4">
           <a 
-            href="#" 
+            href="https://github.com/shresthajeevan" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             aria-label="GitHub" 
             className="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-all"
           >
             <Github size={18} />
           </a>
+
           <a 
-            href="#" 
+            href="https://www.linkedin.com/in/shrestha-jeevan/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             aria-label="LinkedIn" 
             className="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-all"
           >
             <Linkedin size={18} />
           </a>
-          <a 
-            href="#" 
-            aria-label="Twitter" 
-            className="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-all"
-          >
-            <Twitter size={18} />
-          </a>
+          
         </div>
 
         <div className="text-center md:text-right text-sm text-gray-600">

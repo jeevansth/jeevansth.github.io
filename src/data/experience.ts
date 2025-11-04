@@ -2,6 +2,18 @@ import type { Experience } from '../types'
 
 export const experience: Experience[] = [
   {
+    id: 'exp0',
+    company: 'MitraIT Inc.',
+    role: 'Software Engineer (Volunteer)',
+    duration: 'Sep 2025 – Present',
+    achievements: [
+      'Developed and enhanced scalable web applications (React/Node.js), improving performance and code efficiency by 30% and executed RESTful APIs and unit testing to reduce post-release bugs by 25%',
+      'Collaborated in Agile sprints with cross-functional teams, delivering features on time with a 95% sprint completion rate',
+      'Refined database queries and backend processes, significantly improving overall data retrieval speed by 25%',
+      'Conducted code reviews and implemented best practices to maintain code quality and consistency'
+    ]
+  },
+  {
     id: 'exp1',
     company: 'Southeast Missouri State University',
     role: 'Graduate Research Assistant',
@@ -19,9 +31,9 @@ export const experience: Experience[] = [
     role: 'Software Engineer Intern',
     duration: 'Nov 2021 – May 2022',
     achievements: [
-      'Built a responsive Vue.js storefront with performance optimizations improving engagement',
-      'Developed frontend components with CI/CD and automated regression tests (Cucumber BDD)',
-      'Collaborated on SQL/Oracle database design to improve query performance'
+      'Built a React storefront with responsive design, boosting user engagement by 20% and reducing frontend errors by 30% in an Agile environment',
+      'Created frontend components with CI/CD integration and automated regression tests, enhancing development efficiency',
+      'Collaborated with backend engineers on SQL/Oracle database structures, improving query performance by 25%'
     ]
   }
 ]
