@@ -2,7 +2,8 @@ import type { Project } from '../types'
 import tbXrayImg from '../images/negative.png'
 import aiChatbotImg from '../images/ai.png'
 import fraudDetectionImg from '../images/ff.png'
-import privLensImg from '../images/privlens.png' // make sure to add an image
+import privLensImg from '../images/privlens.png'
+import aiStudyTrackerImg from '../images/ai-study-tracker.png' // make sure to add an image
 
 export const projects: Project[] = [
   {
@@ -22,6 +23,15 @@ export const projects: Project[] = [
     tech: ['React', 'Node.js', 'Gemini API', 'MongoDB', 'TailwindCSS'],
     github: 'https://github.com/shresthajeevan/AI-Chatbot.git',
     image: aiChatbotImg
+  },
+  {
+    id: 'ai-study-tracker',
+    title: 'AI-Study Tracker',
+    description:
+      'Created a React.js and Tailwind CSS study tracker with session logging and analytics, enabling tracking of 50+ weekly sessions across 5+ subjects. Built AI-ready recommendation and quiz modules with 20+ automated questions per subject for balanced study habits. Engineered scalable AI features for topic tracking and analytics, producing 100+ personalized learning insights across subjects.',
+    tech: ['React', 'TailwindCSS', 'Node.js', 'Gemini API', 'MongoDB'],
+    github: 'https://github.com/shresthajeevan/AI-Study-Tracker.git',
+    image: aiStudyTrackerImg
   },
   {
     id: 'fraud-detection',

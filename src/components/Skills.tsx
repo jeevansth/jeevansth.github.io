@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Skill } from '../types'
 import { FaPython, FaReact, FaAws, FaDocker, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa'
-import { SiTensorflow, SiOpencv, SiKubernetes, SiMongodb, SiTypescript, SiScikitlearn, SiPytorch, SiFastapi, SiPostgresql, SiRedis, SiJest, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
+import { SiTensorflow, SiOpencv, SiKubernetes, SiMongodb, SiTypescript, SiScikitlearn, SiPytorch, SiFastapi, SiPostgresql, SiRedis, SiJest, SiNextdotjs, SiTailwindcss, SiOpenai } from 'react-icons/si'
 import { BackgroundCanvas } from './BackgroundCanvas'
 
 type Props = { skills: Skill[] }
@@ -11,7 +11,8 @@ const ProfessionalSkills: React.FC<Props> = ({ skills }) => {
     [
       'python', 'tensorflow', 'pytorch', 'scikit-learn', 'opencv', 'fastapi', 'pandas', 'numpy',
       'react', 'typescript', 'nodejs', 'nextjs', 'tailwindcss', 'jest', 'html', 'css', 'javascript',
-      'aws', 'docker', 'kubernetes', 'mongodb', 'postgresql', 'redis', 'git'
+      'aws', 'docker', 'kubernetes', 'mongodb', 'postgresql', 'redis', 'git',
+      'gemini', 'openai'
     ].includes(skill.id)
   )
 
@@ -20,7 +21,7 @@ const ProfessionalSkills: React.FC<Props> = ({ skills }) => {
       title: "AI & Machine Learning",
       icon: <SiTensorflow className="text-xl text-orange-600" />,
       skills: importantSkills.filter(s =>
-        ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'computer-vision', 'fastapi', 'pandas', 'numpy'].includes(s.id)
+        ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'computer-vision', 'fastapi', 'pandas', 'numpy', 'gemini', 'openai'].includes(s.id)
       )
     },
     {
@@ -64,7 +65,9 @@ const ProfessionalSkills: React.FC<Props> = ({ skills }) => {
       'mongodb': <SiMongodb className="text-2xl text-green-500" />,
       'postgresql': <SiPostgresql className="text-2xl text-blue-700" />,
       'redis': <SiRedis className="text-2xl text-red-500" />,
-      'git': <FaGitAlt className="text-2xl text-orange-600" />
+      'git': <FaGitAlt className="text-2xl text-orange-600" />,
+      'gemini': <SiOpenai className="text-2xl text-purple-500" />, // placeholder icon for Gemini
+      'openai': <SiOpenai className="text-2xl text-pink-500" />
     }
     return icons[skillId] || <FaPython className="text-2xl text-gray-500" />
   }
@@ -111,7 +114,7 @@ const ProfessionalSkills: React.FC<Props> = ({ skills }) => {
             <div className="text-center p-4">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-2"><SiTensorflow className="text-2xl text-blue-600" /></div>
               <h4 className="font-semibold text-gray-900 mb-1 text-sm">Machine Learning</h4>
-              <p className="text-gray-600 text-xs">TensorFlow, PyTorch, scikit-learn, model deployment</p>
+              <p className="text-gray-600 text-xs">TensorFlow, PyTorch, scikit-learn, Gemini API, OpenAI GPT</p>
             </div>
 
             <div className="text-center p-4">

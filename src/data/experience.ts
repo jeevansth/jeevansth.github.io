@@ -14,6 +14,18 @@ export const experience: Experience[] = [
     ]
   },
   {
+    id: 'exp3',
+    company: 'Docsumo',
+    role: 'Software Engineer',
+    duration: 'June 2022 – July 2023',
+    achievements: [
+      'Engineered and maintained scalable web and backend solutions with Java, React, and Node.js, boosting performance and reliability of document management workflows',
+      'Implemented automated testing pipelines and CI/CD workflows, reducing integration issues by 35% and accelerating deployment cycles',
+      'Improved user satisfaction by 25% through enhancements to checkout and user management modules in collaboration with cross-functional teams',
+      'Resolved production issues through effective debugging, monitoring, and optimization, maintaining 99.9% uptime'
+    ]
+  },
+  {
     id: 'exp1',
     company: 'Southeast Missouri State University',
     role: 'Graduate Research Assistant',

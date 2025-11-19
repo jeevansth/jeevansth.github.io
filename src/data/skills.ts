@@ -17,6 +17,10 @@ export const skills: Skill[] = [
   { id: 'pandas', name: 'Pandas', level: 'Advanced' },
   { id: 'numpy', name: 'NumPy', level: 'Advanced' },
 
+  // AI APIs & Integrations
+  { id: 'gemini', name: 'Gemini API', level: 'Intermediate' },
+  { id: 'openai', name: 'OpenAI GPT', level: 'Intermediate' },
+
   // Frontend & Full Stack
   { id: 'react', name: 'React.js', level: 'Advanced' },
   { id: 'nextjs', name: 'Next.js', level: 'Intermediate' },
