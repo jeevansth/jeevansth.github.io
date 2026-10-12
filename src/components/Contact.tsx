@@ -37,8 +37,8 @@ const ProfessionalContact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium mb-1">Email</div>
-                  <a href="mailto:shresthajeevan880@gmail.com" className="text-slate-900 font-semibold hover:text-blue-600 transition-colors">
-                    shresthajeevan880@gmail.com
+                  <a href="mailto:shresthajeevan889@gmail.com" className="text-slate-900 font-semibold hover:text-blue-600 transition-colors">
+                    shresthajeevan889@gmail.com
                   </a>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const ProfessionalContact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-medium mb-1">Location</div>
-                  <div className="text-slate-900 font-semibold">Seattle, WA</div>
+                  <div className="text-slate-900 font-semibold">Bedford, TX 76021</div>
                 </div>
               </div>
             </div>
