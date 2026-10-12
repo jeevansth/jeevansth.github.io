@@ -4,6 +4,7 @@ import { projects } from './data/projects'
 import { skills } from './data/skills'
 import { experience } from './data/experience'
 import resumeFile from './data/Jeevan_Shrestha.pdf'
+import './portfolio.css'
 
 const nav = [
   { id: 'work', no: '01', label: 'Work' },
